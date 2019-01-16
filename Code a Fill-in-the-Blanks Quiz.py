@@ -1,4 +1,5 @@
 # The easy empty fill-in-the-blank and its corresponding answers.
+# It will take the input from user and place the answers in blanks#
 easy_fib = ["Two balls and two", "___1___", "on him. Here's the pitch on the "
             "way. A swing and a belt! Left field...way back...BLUE JAYS WIN "
             "IT! The Blue Jays are", "___2___", "Series Champions, as Joe",
@@ -6,6 +7,7 @@ easy_fib = ["Two balls and two", "___1___", "on him. Here's the pitch on the "
             "and the Blue Jays have repeated as World Series Champions!",
             "___5___", "'em all, Joe! You'll never hit a bigger home run in "
             "your life!"]
+#The below mention correct answers of the easy fill in blanks#
 easy_answers = ["strikes", "World", "Carter", "inning", "Touch"]
 
 # The medium empty fill-in-the-blank and its corresponding answers.
@@ -27,6 +29,8 @@ hard_fib = ["Deux balles deux prises a Russell", "___1___", "et voila le "
 hard_answers = ["Martin", "McCann", "PARTIE", "RUSSELL", "RUSSELL", "RUSSELL",
                 "RUSSELL", "Canada"]
 
+#This fundtion will check the difficuly level and return it as per user inputs easy, medium or hard#
+# This function is also take input from the user #
 
 def load_fib_difficulty():
 
@@ -42,6 +46,7 @@ def load_fib_difficulty():
         print "You selected an invalid difficulty level!"
         return load_fib_difficulty()
 
+#This function will remove the soacess from the string#
 
 def remove_spaces_before_punc(fib_string):
 
@@ -50,6 +55,7 @@ def remove_spaces_before_punc(fib_string):
     return fib_string
 
 
+#This function check compare the answers from user and will place it#
 
 def guess_check(blank_number, fib, answers, answer):
 
@@ -65,6 +71,7 @@ def guess_check(blank_number, fib, answers, answer):
         print "Incorrect. Please try again.\n"
         return guess_check(blank_number, fib, answers, answer)
 
+#This function  will print after join the string#
 
 def play_game():
 
@@ -79,5 +86,5 @@ def play_game():
 
     print ("Congratulations, you have filled in all of the blanks!")
 
-
+#Call the function play game#
 play_game()
